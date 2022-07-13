@@ -1,0 +1,34 @@
+div#working_notify {
+    margin: 0px auto;
+}
+
+div#working_image img {
+    display: block;
+    margin: auto;
+    max-height: 350px;
+}
+
+div#working_notify div {
+    margin: 30px auto;
+}
+
+div#social_media_icons img {
+    width: 40px;
+}
+
+div#social_media_icons a {
+    text-decoration: none;
+}
+
+div#email p {
+    display: inline;
+}
+
+div#email img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
