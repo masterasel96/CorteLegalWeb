@@ -1,5 +1,6 @@
 div#working_notify {
     margin: 0px auto;
+    max-width: 1300px;
 }
 
 div#working_image img {
@@ -12,19 +13,25 @@ div#working_notify div {
     margin: 30px auto;
 }
 
-div#social_media_icons img {
+div#contact img {
     width: 40px;
 }
 
-div#social_media_icons a {
+div#logo img {
+    display: block;
+    margin: auto;
+    max-height: 200px;
+}
+
+div#contact a {
     text-decoration: none;
 }
 
-div#email p {
+div#contact p {
     display: inline;
 }
 
-div#email img {
+div#contact img[src="./images/email_icon.png"] {
     width: 20px;
     margin-right: 5px;
 }
