@@ -1,0 +1,41 @@
+div#working_notify {
+    margin: 0px auto;
+    max-width: 1300px;
+}
+
+div#working_image img {
+    display: block;
+    margin: auto;
+    max-height: 350px;
+}
+
+div#working_notify div {
+    margin: 30px auto;
+}
+
+div#contact img {
+    width: 40px;
+}
+
+div#logo img {
+    display: block;
+    margin: auto;
+    max-height: 200px;
+}
+
+div#contact a {
+    text-decoration: none;
+}
+
+div#contact p {
+    display: inline;
+}
+
+div#contact img[src="./images/email_icon.png"] {
+    width: 20px;
+    margin-right: 5px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
