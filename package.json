@@ -2,21 +2,18 @@
   "name": "cortelegalweb",
   "version": "0.0.1",
   "description": "Web for Corte Legal Lawyers",
-  "main": "index.js",
+  "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch src/assets/styles/scss/main.scss:src/assets/styles/main.min.css --style compressed --source-map"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/masterasel96/CorteLegalWeb.git"
   },
   "author": "MubLab Devs",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/masterasel96/CorteLegalWeb/issues"
-  },
-  "homepage": "https://github.com/masterasel96/CorteLegalWeb#readme",
-  "dependencies": {
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "devDependencies": {
+    "bootstrap": "^5.2.0-beta1",
     "sass": "^1.53.0"
   }
 }
