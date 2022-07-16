@@ -1,0 +1,19 @@
+{
+  "name": "cortelegalweb",
+  "version": "0.0.1",
+  "description": "Web for Corte Legal Lawyers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masterasel96/CorteLegalWeb.git"
+  },
+  "author": "MubLab Devs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masterasel96/CorteLegalWeb/issues"
+  },
+  "homepage": "https://github.com/masterasel96/CorteLegalWeb#readme"
+}
