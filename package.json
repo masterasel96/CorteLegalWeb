@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/masterasel96/CorteLegalWeb/issues"
   },
-  "homepage": "https://github.com/masterasel96/CorteLegalWeb#readme"
+  "homepage": "https://github.com/masterasel96/CorteLegalWeb#readme",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
 }
