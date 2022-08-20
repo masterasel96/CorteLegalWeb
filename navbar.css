@@ -9,6 +9,18 @@
     box-shadow: none
 }
 
-button#makeQuery {
-    
+button.btn-primary {
+    background-color: #243763;
+    color: #F9F9F9;
+    font-weight: bold;
+    border: none;
+    padding: 5px;
+}
+
+button.btn-primary:hover {
+    background-color: #455E81;
+}
+
+button#makeQueryBtn {
+    height: 45px;
 }
