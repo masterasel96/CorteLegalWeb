@@ -32,14 +32,14 @@
     }
 }
 
-#cardContainer #filaUno {
+#cardContainer .left-arrow {
     text-align: center;
     font-size: medium;
     font-weight: bold;
     position: relative
 }
 
-#cardContainer #filaUno #title a {
+#cardContainer .left-arrow #title a {
     position: absolute;
     position: absolute;
     top: 50%;
@@ -51,24 +51,24 @@
     text-decoration: none
 }
 
-#cardContainer #filaUno #content {
+#cardContainer .left-arrow #content {
     display: table
 }
 
-#cardContainer #filaUno #content p {
+#cardContainer .left-arrow #content p {
     text-align: center;
     vertical-align: middle;
     display: table-cell
 }
 
-#cardContainer #filaDos {
+#cardContainer .right-arrow {
     text-align: center;
     font-size: medium;
     font-weight: bold;
     position: relative
 }
 
-#cardContainer #filaDos #title a {
+#cardContainer .right-arrow #title a {
     position: absolute;
     position: absolute;
     top: 50%;
@@ -80,11 +80,11 @@
     text-decoration: none
 }
 
-#cardContainer #filaDos #content {
+#cardContainer .right-arrow #content {
     display: table
 }
 
-#cardContainer #filaDos #content p {
+#cardContainer .right-arrow #content p {
     text-align: center;
     vertical-align: middle;
     display: table-cell
@@ -98,13 +98,13 @@
 }
 
 @media screen and (max-width: 575px) {
-    #cardContainer #filaUno {
+    #cardContainer .left-arrow {
         text-align: center;
         background-color: #455e81;
         margin: 1rem
     }
 
-    #cardContainer #filaUno #title {
+    #cardContainer .left-arrow #title {
         background-color: #243763
     }
 
@@ -128,7 +128,7 @@
         display: none;
     }
 
-    #cardContainer #filaUno #title a {
+    #cardContainer .left-arrow #title a {
         font-size: large;
         position: relative;
         top: 0%;
@@ -137,26 +137,26 @@
         transform: translate(0%, 0%)
     }
 
-    #cardContainer #filaUno #content {
+    #cardContainer .left-arrow #content {
         position: relative;
         color: #fff
     }
 
-    #cardContainer #filaDos {
+    #cardContainer .right-arrow {
         text-align: center;
         background-color: #455e81;
         margin: 1rem
     }
 
-    #cardContainer #filaDos #title {
+    #cardContainer .right-arrow #title {
         background-color: #243763
     }
 
-    #cardContainer #filaDos #title #img {
+    #cardContainer .right-arrow #title #img {
         display: none
     }
 
-    #cardContainer #filaDos #title a {
+    #cardContainer .right-arrow #title a {
         font-size: large;
         position: relative;
         top: 0%;
@@ -165,7 +165,7 @@
         transform: translate(0%, 0%)
     }
 
-    #cardContainer #filaDos #content {
+    #cardContainer .right-arrow #content {
         position: relative;
         color: #fff
     }

@@ -1,10 +1,22 @@
-.navbar-brand img {
-    width: 150px
+#mainNavbar {
+    height: 160px;
+    padding: 0px;
+    margin-bottom: 15px;
 }
 
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
+#mainNavbar .container-fluid {
+    padding: 0px;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+#mainNavbar .navbar-brand img {
+    width: 200px
+}
+
+#mainNavbar .navbar-toggler:focus,
+#mainNavbar .navbar-toggler:active,
+#mainNavbar .navbar-toggler-icon:focus {
     outline: none;
     box-shadow: none
 }
@@ -21,6 +33,84 @@ button.btn-primary:hover {
     background-color: #455E81;
 }
 
-button#makeQueryBtn {
+#mainNavbar button#makeQueryBtn {
     height: 45px;
+}
+
+#mainNavbar .navbar-toggler {
+    margin-top: 10px;
+    border: none;
+    padding: 0px;
+}
+
+#mainNavbar .navbar-toggler div {
+    width: 35px;
+    height: 24px;
+    position: relative;
+    margin: 0px;
+}
+
+#mainNavbar .navbar-toggler div span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    background: #455E81;
+}
+
+#mainNavbar .navbar-toggler div span:nth-child(1) {
+    top: 0px;
+}
+
+#mainNavbar .navbar-toggler div span:nth-child(2) {
+    top: 12px;
+}
+
+#mainNavbar .navbar-toggler div span:nth-child(3) {
+    top: 24px;
+}
+
+#mainNavbar .navbar-collapse .navbar-nav li {
+    margin: auto;
+}
+
+#mainNavbar .navbar-collapse .navbar-nav a:hover {
+    margin-bottom: -7px;
+}
+
+#mainNavbar .navbar-collapse .navbar-nav a {
+    color: #566D8C;
+    font-weight: 800;
+    -webkit-transition: all .1s linear ;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+#mainNavbar .navbar-collapse .navbar-nav a.active {
+    color: #243763;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#mainNavbar .navbar-collapse .navbar-nav a.active:hover {
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 766px) {
+
+    #mainNavbar .navbar-collapse {
+        position: absolute;
+        z-index: 1;
+        top: 157px;
+        right: 0px;
+        left: 0px;
+        padding: 15px;
+        background: white;
+        text-align: center;
+    }
+
 }
