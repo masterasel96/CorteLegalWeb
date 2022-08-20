@@ -1,0 +1,155 @@
+#containerImg {
+    position: relative;
+    text-align: center
+}
+
+#containerImg #img {
+    position: relative;
+    filter: blur(1.5px)
+}
+
+#containerImg #textImg {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-weight: bold
+}
+
+@media screen and (max-width: 500px) {
+    #containerImg #textImg {
+        position: absolute;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        transform: translate(-50%, -50%);
+        font-size: small;
+        font-weight: bold
+    }
+}
+
+#cardContainer #filaUno {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    position: relative
+}
+
+#cardContainer #filaUno #title a {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none
+}
+
+#cardContainer #filaUno #content {
+    display: table
+}
+
+#cardContainer #filaUno #content p {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell
+}
+
+#cardContainer #filaDos {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    position: relative
+}
+
+#cardContainer #filaDos #title a {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none
+}
+
+#cardContainer #filaDos #content {
+    display: table
+}
+
+#cardContainer #filaDos #content p {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell
+}
+
+@media screen and (max-width: 991px) {
+    #cardContainer #title {
+        font-size: smaller
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #cardContainer #filaUno {
+        text-align: center;
+        background-color: #455e81;
+        margin: 1rem
+    }
+
+    #cardContainer #filaUno #title {
+        background-color: #243763
+    }
+
+    #cardContainer #filaUno #title #img {
+        display: none
+    }
+
+    #cardContainer #filaUno #title a {
+        font-size: large;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        color: #fff;
+        transform: translate(0%, 0%)
+    }
+
+    #cardContainer #filaUno #content {
+        position: relative;
+        color: #fff
+    }
+
+    #cardContainer #filaDos {
+        text-align: center;
+        background-color: #455e81;
+        margin: 1rem
+    }
+
+    #cardContainer #filaDos #title {
+        background-color: #243763
+    }
+
+    #cardContainer #filaDos #title #img {
+        display: none
+    }
+
+    #cardContainer #filaDos #title a {
+        font-size: large;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        color: #fff;
+        transform: translate(0%, 0%)
+    }
+
+    #cardContainer #filaDos #content {
+        position: relative;
+        color: #fff
+    }
+}
