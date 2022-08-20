@@ -1,3 +1,13 @@
-#general {
-    background-color: #4169e1
+#rrss{
+    font-weight: bold;
+    font-size: larger;
+}
+
+#rrss img{
+    width: 60px;
+}
+
+#footerContent{
+
+    max-width: 1200px;
 }
