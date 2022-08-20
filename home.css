@@ -92,7 +92,8 @@
 
 @media screen and (max-width: 991px) {
     #cardContainer #title {
-        font-size: smaller
+        font-size: smaller;
+        align-self: center;
     }
 }
 
@@ -107,8 +108,24 @@
         background-color: #243763
     }
 
-    #cardContainer #filaUno #title #img {
-        display: none
+    .corner{
+
+        display: none;
+    }
+
+    .corner:after,
+    .corner:before {
+        display: none;
+    }
+
+    .corner2{
+
+        display: none;
+    }
+
+    .corner2:after,
+    .corner2:before {
+        display: none;
     }
 
     #cardContainer #filaUno #title a {
@@ -152,4 +169,64 @@
         position: relative;
         color: #fff
     }
+}
+
+/*
+LEFTSIDE ARROW FORM
+*/
+
+.corner {
+    background-color: #243763;
+    margin: 10px;
+    position: relative;
+    min-height: 100px;
+    max-width: 80%;
+}
+
+.corner:after,
+.corner:before {
+    background-color: #243763;
+    content: "";
+    position: absolute;
+    left: 100%;
+    width: 40px;
+    height: 50%;
+}
+
+.corner:before {
+    top: 0px;
+    background: linear-gradient(to top right, #243763 50%, transparent 51%);
+}
+
+.corner:after {
+    bottom: 0px;
+    background: linear-gradient(to bottom right, #243763 50%, transparent 51%);
+}
+
+.corner2{
+    background-color: #243763;
+    margin: 10px;
+    position: relative;
+    min-height: 100px;
+    max-width: 80%;
+}
+
+.corner2:after,
+.corner2:before {
+    background-color: #243763;
+    content: "";
+    position: absolute;
+    right: 100%;
+    width: 40px;
+    height: 50%;
+}
+
+.corner2:before {
+    top: 0px;
+    background: linear-gradient(to top left, #243763 50%, transparent 51%);
+}
+
+.corner2:after {
+    bottom: 0px;
+    background: linear-gradient(to bottom left, #243763 50%, transparent 51%);
 }
