@@ -65,6 +65,32 @@
 
 /** -- ARROWS -- **/
 
+.container-arrows .left-arrow.active > div,
+.container-arrows .right-arrow.active > div {
+    transition: transform 1s linear;
+    transform: translate(0px, 0px) !important;
+}
+
+.container-arrows .left-arrow.active div.arrow-border {
+    transition: transform 1s linear;
+    box-shadow: -45px 40px 24px -39px rgb(0 0 0 / 75%);
+}
+
+.container-arrows .right-arrow.active div.arrow-border {
+    transition: transform 1s linear;
+    box-shadow: 45px 40px 24px -39px rgb(0 0 0 / 75%);
+}
+
+.container-arrows .left-arrow > div:nth-child(1),
+.container-arrows .right-arrow > div:nth-child(1) {
+    transform: translate(-80px, 0px);
+}
+
+.container-arrows .left-arrow > div:nth-child(2),
+.container-arrows .right-arrow > div:nth-child(2) {
+    transform: translate(80px, 0px);
+}
+
 .container-arrows div.arrow-title {
     padding: 0px;
     font-family: 'title-font' !important;
@@ -121,15 +147,6 @@
     height: 90px;
     width: 100%;
     transform: translate(0px, -7px);
-    box-shadow: 45px 40px 24px -39px rgb(0 0 0 / 75%);
-}
-
-.container-arrows .left-arrow div.arrow-border {
-    box-shadow: -45px 40px 24px -39px rgb(0 0 0 / 75%);
-}
-
-.container-arrows .right-arrow div.arrow-border {
-    box-shadow: 45px 40px 24px -39px rgb(0 0 0 / 75%);
 }
 
 .container-arrows div.arrow-border:before {
