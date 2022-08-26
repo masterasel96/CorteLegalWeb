@@ -1,232 +1,283 @@
-#containerImg {
+/** 
+    DEFAULT WIDTH BREAKPOINTS
+    - small -> 576px
+    - medium -> 768px
+    - large -> 992px
+    - extra-large -> 1200px
+**/
+
+/** 
+    COLORS
+    - font-ligth -> #E8E8E8
+    - font-dark -> #404040
+    - header -> #F1F1F1
+    - body -> #FBFBFB
+    - blue-ligth -> #566D8C
+    - blue-dark -> #243763
+**/
+
+
+/** -- CONTAINER IMAGE -- **/
+
+.container-img {
     position: relative;
-    text-align: center
+    text-align: center;
+    background-image: url('./images/city.png');
+    height: 550px;
 }
 
-#containerImg #img {
-    position: relative;
-    filter: blur(1.5px)
-}
-
-#containerImg #textImg {
-    position: absolute;
+.container-img div {
     position: absolute;
     top: 50%;
     left: 50%;
-    color: #fff;
+    color: #E8E8E8;
     transform: translate(-50%, -50%);
-    font-size: larger;
-    font-weight: bold
+    width: 90%;
+    font-family: 'main-font';
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 500px) {
-    #containerImg #textImg {
-        position: absolute;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        color: #fff;
-        transform: translate(-50%, -50%);
-        font-size: small;
-        font-weight: bold
+.container-img div p {
+    margin: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-img {
+        height: 450px;
+    }
+
+    .container-img div {
+        font-size: 15px;
+    }
+
+    .container-img div p {
+        margin: 10px;
+    }
+
+    .container-img div img {
+        width: 120px;
     }
 }
 
-#cardContainer .left-arrow {
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    position: relative
+/** -- CONTAINER IMAGE -- **/
+
+/** -- ARROWS -- **/
+
+.container-arrows div.arrow-title {
+    padding: 0px;
+    font-family: 'title-font' !important;
+    color: #E8E8E8;
 }
 
-#cardContainer .left-arrow #title a {
+.container-arrows div.arrow-title a {
     position: absolute;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    color: #fff;
-    transform: translate(-50%, -50%);
-    font-size: larger;
+    top: 25%;
+    color: #E8E8E8;
+    font-size: 26px;
+    text-decoration: none;
     font-weight: bold;
-    text-decoration: none
 }
 
-#cardContainer .left-arrow #content {
-    display: table
+.container-arrows div.arrow-title a img {
+    width: 45px;
+    margin-top: -15px;
 }
 
-#cardContainer .left-arrow #content p {
+.container-arrows .left-arrow div.arrow-title a img {
+    margin-right: 15px;
+}
+
+.container-arrows .right-arrow div.arrow-title a img {
+    margin-left: 15px;
+}
+
+.container-arrows .left-arrow div.arrow-title a {
+    right: 10%;
+}
+
+.container-arrows .right-arrow div.arrow-title a {
+    left: 10%;
+}
+
+.container-arrows div.arrow-text {
+    display: table;
+    font-family: 'main-font' !important;
+    color: #404040;
+    font-weight: bold;
+}
+
+.container-arrows div.arrow-text p {
     text-align: center;
     vertical-align: middle;
     display: table-cell
 }
 
-#cardContainer .right-arrow {
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    position: relative
-}
-
-#cardContainer .right-arrow #title a {
+.container-arrows div.arrow-border {
+    border-top: 2px solid #243763;
+    border-bottom: 2px solid #243763;
     position: absolute;
+    height: 90px;
+    width: 100%;
+    transform: translate(0px, -7px);
+    box-shadow: 45px 40px 24px -39px rgb(0 0 0 / 75%);
+}
+
+.container-arrows .left-arrow div.arrow-border {
+    box-shadow: -45px 40px 24px -39px rgb(0 0 0 / 75%);
+}
+
+.container-arrows .right-arrow div.arrow-border {
+    box-shadow: 45px 40px 24px -39px rgb(0 0 0 / 75%);
+}
+
+.container-arrows div.arrow-border:before {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 75%;
-    color: #fff;
-    transform: translate(-50%, -50%);
-    font-size: larger;
-    font-weight: bold;
-    text-decoration: none
+    width: 63px;
+    top: 11px;
+    transform: rotate(45deg);
+    height: 63px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-#cardContainer .right-arrow #content {
-    display: table
+.container-arrows .left-arrow .arrow-border:before {
+    right: -32px;
+    border-right: 2px solid #243763;
+    border-top: 2px solid #243763;
 }
 
-#cardContainer .right-arrow #content p {
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell
+.container-arrows .right-arrow .arrow-border:before {
+    left: -32px;
+    border-left: 2px solid #243763;
+    border-bottom: 2px solid #243763;
 }
 
-@media screen and (max-width: 991px) {
-    #cardContainer #title {
-        font-size: smaller;
-        align-self: center;
-    }
+.container-arrows div.arrow-border:after {
+    content: "";
+    position: absolute;
+    height: 90px;
+    top: -2px;
+    border-top: 2px solid #243763;
+    width: 6px;
+    border-radius: 5px;
+    border-bottom: 2px solid #243763;
 }
 
-@media screen and (max-width: 575px) {
-    #cardContainer .left-arrow {
-        text-align: center;
-        background-color: #455e81;
-        margin: 1rem
-    }
-
-    #cardContainer .left-arrow #title {
-        background-color: #243763
-    }
-
-    .corner{
-
-        display: none;
-    }
-
-    .corner:after,
-    .corner:before {
-        display: none;
-    }
-
-    .corner2{
-
-        display: none;
-    }
-
-    .corner2:after,
-    .corner2:before {
-        display: none;
-    }
-
-    #cardContainer .left-arrow #title a {
-        font-size: large;
-        position: relative;
-        top: 0%;
-        left: 0%;
-        color: #fff;
-        transform: translate(0%, 0%)
-    }
-
-    #cardContainer .left-arrow #content {
-        position: relative;
-        color: #fff
-    }
-
-    #cardContainer .right-arrow {
-        text-align: center;
-        background-color: #455e81;
-        margin: 1rem
-    }
-
-    #cardContainer .right-arrow #title {
-        background-color: #243763
-    }
-
-    #cardContainer .right-arrow #title #img {
-        display: none
-    }
-
-    #cardContainer .right-arrow #title a {
-        font-size: large;
-        position: relative;
-        top: 0%;
-        left: 0%;
-        color: #fff;
-        transform: translate(0%, 0%)
-    }
-
-    #cardContainer .right-arrow #content {
-        position: relative;
-        color: #fff
-    }
+.container-arrows .left-arrow .arrow-border:after {
+    left: -5px;
+    border-left: 2px solid #243763;
 }
 
-/*
-LEFTSIDE ARROW FORM
-*/
+.container-arrows .right-arrow div.arrow-border:after {
+    border-right: 2px solid #243763;
+    right: -5px;
+}
 
 .corner {
     background-color: #243763;
     margin: 10px;
     position: relative;
-    min-height: 100px;
+    min-height: 75px;
     max-width: 80%;
 }
 
 .corner:after,
-.corner:before {
+.corner:before
+{
     background-color: #243763;
+    background: none;
     content: "";
     position: absolute;
-    left: 100%;
-    width: 40px;
+    width: 37px;
     height: 50%;
 }
 
-.corner:before {
+.corner-left:before {
     top: 0px;
     background: linear-gradient(to top right, #243763 50%, transparent 51%);
 }
 
-.corner:after {
+.corner-left:after {
     bottom: 0px;
     background: linear-gradient(to bottom right, #243763 50%, transparent 51%);
 }
 
-.corner2{
-    background-color: #243763;
-    margin: 10px;
-    position: relative;
-    min-height: 100px;
-    max-width: 80%;
-}
-
-.corner2:after,
-.corner2:before {
-    background-color: #243763;
-    content: "";
-    position: absolute;
-    right: 100%;
-    width: 40px;
-    height: 50%;
-}
-
-.corner2:before {
+.corner-rigth:before {
     top: 0px;
     background: linear-gradient(to top left, #243763 50%, transparent 51%);
 }
 
-.corner2:after {
+.corner-rigth:after {
     bottom: 0px;
     background: linear-gradient(to bottom left, #243763 50%, transparent 51%);
 }
+
+.corner-left:after,
+.corner-left:before {
+    left: 100%;
+}
+
+.corner-rigth:after,
+.corner-rigth:before {
+    right: 100%;
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 768px) {
+    .container-arrows > div > div {   
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 10px 16px -14px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 10px 16px -14px rgba(0,0,0,0.75);
+        box-shadow: 0px 10px 16px -14px rgba(0,0,0,0.75);
+    }
+
+    .container-arrows > div > div > div {   
+        padding: 0px;
+    }
+
+    .container-arrows div.arrow-text {
+        padding: 10px;
+        background: #F1F1F1;
+    }
+
+    .container-arrows .right-arrow div.arrow-text {
+        order: 1;
+    }
+
+    .container-arrows div.arrow-title {
+        text-align: center;
+        padding-top: 18px;
+    }
+
+    .corner {
+        min-height: 60px;
+        max-width: 100%;
+        margin: 0px;
+    }
+
+    .corner:after,
+    .corner:before
+    {
+        display: none;
+    }
+
+    .container-arrows div.arrow-border {
+        display: none;
+    }
+
+    .container-arrows div.arrow-title a {
+        font-size: 18px;
+        position: initial;
+    }
+    
+    .container-arrows div.arrow-title a img {
+        width: 35px;
+    }
+}
+
+/** -- ARROWS -- **/
