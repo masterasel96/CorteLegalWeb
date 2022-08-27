@@ -2,26 +2,26 @@ const elements = {
     buttons: {
         primary: $('.btn-primary')
     },
+    elements: {
+        arrows: $('.arrow')
+    },
     
     initButtons: function() {
         
     },
 
     initScrollEvent: function() {
-        $('.arrow').each((c, arrow) => {
+        this.controlArrowsAnimation()
+        $(document).scroll(_ => this.controlArrowsAnimation())
+    },
+
+    controlArrowsAnimation: function() {
+        this.elements.arrows.each((c, arrow) => {
             !$(arrow).hasClass('active') 
             && window.innerHeight + window.scrollY - 50 > arrow.offsetTop 
             && $(arrow).addClass('active')
         });
-        $(document).scroll(_ => {
-            $('.arrow').each((c, arrow) => {
-                !$(arrow).hasClass('active') 
-                && window.innerHeight + window.scrollY > arrow.offsetTop 
-                && $(arrow).addClass('active')
-            });
-        })
-        
     }
 }
 
-$(document).ready(() => elements.initScrollEvent());
+$(document).ready(_ => elements.initScrollEvent())
