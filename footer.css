@@ -1,13 +1,98 @@
-#rrss{
-    font-weight: bold;
-    font-size: larger;
+#mainFooter {
+    -webkit-box-shadow: 0px -15px 22px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -15px 22px -17px rgba(0,0,0,0.75);
+    box-shadow: 0px -15px 22px -17px rgba(0,0,0,0.75);
 }
 
-#rrss img{
-    width: 60px;
+#mainFooter .container-fluid div {
+    text-align: center;
 }
 
-#footerContent{
+#mainFooter div.container-fluid:nth-child(1) {
+    background-image: url('./images/footer-back-left.png'), url('./images/footer-back-rigth.png');
+    background-size: 50% 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+}
 
+#mainFooter div.container-fluid:nth-child(1) > div.row {
+    background-image: url('./images/footer.png');
+    height: 320px;
+}
+
+#mainFooter div.container-fluid > div.row {
     max-width: 1200px;
+    margin: 0px auto;
+    padding-top: 15px;
+}
+
+#mainFooter a {
+    text-decoration: none;
+    color: #E8E8E8;
+    font-size: 25px;
+    font-family: 'main-font';
+    transition: transform .1s linear;
+}
+
+#mainFooter a:hover {
+    transform: translate(5px, 0px);
+}
+
+#mainFooter a#sendEmailFooter {
+    margin-top: 100px;
+    position: relative;
+    top: 45%;
+}
+
+#mainFooter .menu-info > div,
+#mainFooter .data-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px;
+}
+
+#mainFooter .data-info a {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'title-font';
+}
+
+#mainFooter .social-info p {
+    display: inline;
+    font-family: 'title-font';
+    color: #243763;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 5px;
+}
+
+#mainFooter .social-info img {
+    width: 45px;
+    margin: 10px 5px;
+}
+
+@media screen and (max-width: 992px) {
+    #mainFooter div.container-fluid:nth-child(1) > div.row {
+        background: none;
+    }
+
+    #mainFooter div.container-fluid:nth-child(1) {
+        background: url(./images/footer-back-rigth.png);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #mainFooter a#sendEmailFooter {
+        top: 0%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #mainFooter div.container-fluid > div.row {
+        padding-top: 5px;
+    }
+
+    #mainFooter .menu-info > div,
+    #mainFooter .data-info {
+        padding: 10px 0px;
+    }   
 }
