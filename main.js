@@ -1,13 +1,22 @@
 const elements = {
     buttons: {
-        primary: $('.btn-primary')
+        menu: $('#menuHamburguer')
     },
     elements: {
-        arrows: $('.arrow')
+        arrows: $('.arrow'),
+        veil: $('#veil')
+    },
+
+    init: function() {
+        this.initButtons()
+        this.initScrollEvent()
     },
     
     initButtons: function() {
-        
+        this.buttons.menu.click(_ => {
+            this.elements.veil.toggle()
+            $('body').toggleClass('veil')
+        })
     },
 
     initScrollEvent: function() {
@@ -24,4 +33,4 @@ const elements = {
     }
 }
 
-$(document).ready(_ => elements.initScrollEvent())
+$(document).ready(_ => elements.init())
