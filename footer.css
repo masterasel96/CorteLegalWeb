@@ -28,7 +28,7 @@
 #mainFooter a {
     text-decoration: none;
     color: #E8E8E8;
-    font-size: 25px;
+    font-size: 28px;
     font-family: 'main-font';
     transition: transform .1s linear;
 }
@@ -94,5 +94,13 @@
     #mainFooter .menu-info > div,
     #mainFooter .data-info {
         padding: 10px 0px;
-    }   
+    }
+    
+    #mainFooter a {
+        font-size: 22px !important;
+    }
+
+    #mainFooter .data-info a {
+        font-size: 15px !important;
+    }
 }
