@@ -40,6 +40,10 @@ body {
     overflow-x: hidden;
 }
 
+body > div.container-fluid {
+  padding: 175px 0px 0px 0px;
+}
+
 .main-container {
     max-width: 1200px;
     margin: 0px auto;
@@ -59,10 +63,10 @@ button.btn-primary:hover {
 }
 
 #veil {
-  position: absolute;
+  position: fixed;
   top: 0px;
+  bottom: 0px;
   width: 100%;
-  height: 100%;
   background: black;
   z-index: 2;
   opacity: .3;
@@ -74,9 +78,7 @@ body.veil {
 }
 
 @media screen and (max-width: 768px) {
-    body > div.container-fluid {
-        padding: 0px;
-    }
+    
 }
 
 ::-webkit-scrollbar {

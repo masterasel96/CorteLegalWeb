@@ -7,7 +7,11 @@
     -moz-box-shadow: 0px 10px 22px -17px rgba(0,0,0,0.75);
     box-shadow: 0px 10px 22px -17px rgba(0,0,0,0.75);
     z-index: 3;
-}
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all .2s linear;
+}   
 
 #mainNavbar .container-fluid {
     padding: 0px;
@@ -16,7 +20,8 @@
 }
 
 #mainNavbar .navbar-brand img {
-    width: 200px
+    width: 200px;
+    transition: all .1s linear;
 }
 
 #mainNavbar .navbar-toggler:focus,
@@ -95,6 +100,23 @@
     margin-bottom: 0px;
 }
 
+#mainNavbar.sticky-active {
+    height: 85px;
+}
+
+#mainNavbar.sticky-active .navbar-brand img {
+    width: 110px;
+}
+
+#mainNavbar.sticky-active #makeQueryBtn {
+    height: 35px;
+}
+
+#mainNavbar.sticky-active .navbar-collapse .navbar-nav a {
+    font-size: 15px;
+    padding: 0px 10px;
+}
+
 @media only screen and (max-width: 768px) {
     #mainNavbar .navbar-collapse {
         position: absolute;
@@ -105,5 +127,29 @@
         padding: 15px;
         background: #F1F1F1;
         text-align: center;
+    }
+
+    #mainNavbar.sticky-active .navbar-collapse {
+        top: 85px;
+    }
+
+    #mainNavbar.sticky-active .navbar-collapse .navbar-nav a {
+        padding: 10px;
+    }
+
+    #mainNavbar.sticky-active .navbar-toggler div {
+        width: 30px;
+    }
+
+    #mainNavbar.sticky-active .navbar-toggler div span:nth-child(1) {
+        top: 0px;
+    }
+    
+    #mainNavbar.sticky-active .navbar-toggler div span:nth-child(2) {
+        top: 10px;
+    }
+    
+    #mainNavbar.sticky-active .navbar-toggler div span:nth-child(3) {
+        top: 20px;
     }
 }
