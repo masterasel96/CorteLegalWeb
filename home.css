@@ -301,3 +301,45 @@
 }
 
 /** -- ARROWS -- **/
+
+/** -- CAROUSEL -- **/
+
+.carousel {
+    height: 400px;
+    -webkit-box-shadow: 0px -10px 22px -17px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px -10px 22px -17px rgb(0 0 0 / 75%);
+    box-shadow: 0px -10px 22px -17px rgb(0 0 0 / 75%);
+}
+
+.carousel .carousel-inner {
+    height: 100%;
+}
+
+.carousel .carousel-item {
+    height: 100%;
+    background: url(./images/post.png);
+}
+
+.carousel .carousel-item h2 {
+    margin-bottom: 15px;
+    color: #E8E8E8;
+}
+
+.carousel .carousel-item p {
+    font-weight: bold;
+    color: #E8E8E8;
+    font-style: italic;
+}
+
+.carousel .carousel-item a {
+    text-decoration: none;
+    font-family: 'main-font';
+    font-weight: bold;
+    color: #E8E8E8;
+}
+
+.carousel .carousel-indicators button {
+    background-color: #E8E8E8;
+}
+
+/** -- CAROUSEL -- **/
