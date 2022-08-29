@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>CorteLegal | Inicio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
         <link href="./main.css" rel="stylesheet">
         <link href="./home.css" rel="stylesheet">
         <link href="./navbar.css" rel="stylesheet">
@@ -35,9 +36,20 @@
     
                         <div class="navbar-collapse collapse" id="menuCategories">
                             <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">SERVICIOS</a>
-                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        SERVICIOS
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#civilArrow">DERECHO CIVIL</a></li>
+                                      <li><a class="dropdown-item" href="#penalArrow">DERECHO PENAL</a></li>
+                                      <li><a class="dropdown-item" href="#merchantArrow">DERECHO MERCANTIL</a></li>
+                                      <li><a class="dropdown-item" href="#workArrow">DERECHO LABORAL</a></li>
+                                      <li><a class="dropdown-item" href="#adminArrow">DERECHO ADMINISTRATIVO</a></li>
+                                      <li><a class="dropdown-item" href="#helpArrow">ASESORÍA</a></li>
+                                      <li><a class="dropdown-item" href="#middleArrow">MEDIACIÓN</a></li>
+                                    </ul>
+                                  </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">EQUIPO</a>
                                 </li>
@@ -69,39 +81,42 @@
             <div class="main-container">
                 <div class="container-fluid w-100 container-arrows mb-5">
                     <div class="container-fluid w-100 mb-5">
-                        <div class="row arrow left-arrow">
+                        <div class="row arrow left-arrow" id="civilArrow">
                             <div class="col-md-6">
                                 <div class="container-fluid arrow-title corner corner-left">
                                     <div class="arrow-border"></div>
-                                    <a href="#" class="">
-                                        <img src="./images/icons/hummer.png" alt="Lawyer hummer..">
+                                    <a href="#">
+                                        <img src="./images/icons/document.png" alt="Lawyer document..">
                                         Derecho Civil
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-6 arrow-text">
                                 <p>
-                                    Familia - Herencias - Bancario
-                                    Contratos - Arrendamientos -
-                                    Comunidad de Propietarios
+                                    Contratos - Arrendamientos - Herencias -
+                                    Divorcios y Separaciones - Bancario -
+                                    Comunidad de Propietarios - Defectos de construcción -
+                                    Inmobiliario - Reclamaciones al seguro - Responsabilidad Contractual - 
+                                    Responsabilidad Extracontractual
                                 </p>
                             </div>
                         </div>
                     </div>
             
                     <div class="container-fluid w-100 mb-5">
-                        <div class="row arrow right-arrow">
+                        <div class="row arrow right-arrow" id="penalArrow">
                             <div class="col-md-6 arrow-text">
                                 <p>
-                                    Delitos leves - Delitos contra la seguridad del tráfico -
-                                    Delitos de persona física - Delitos graves
-                                    Violencia de género - Compliance
+                                    Defensa de los derechos de víctimas y perjudicados
+                                    - Asistencia al detenido y defensa del acusado
+                                    - Responsabilidad penal de las personas jurídicas
+                                    - Departamento de Compliance
                                 </p>
                             </div>
                             <div class="container-fluid col-md-6">
                                 <div class="container-fluid corner corner-rigth arrow-title">
                                     <div class="arrow-border"></div>
-                                    <a href="#" class="">
+                                    <a href="#">
                                         Derecho Penal
                                         <img src="./images/icons/hummer.png" alt="Lawyer hummer..">
                                     </a>
@@ -111,41 +126,48 @@
                     </div>
 
                     <div class="container-fluid w-100 mb-5">
-                        <div class="row arrow left-arrow">
+                        <div class="row arrow left-arrow" id="merchantArrow">
                             <div class="col-md-6">
                                 <div class="container-fluid arrow-title corner corner-left">
                                     <div class="arrow-border"></div>
-                                    <a href="#" class="">
-                                        <img src="./images/icons/hummer.png" alt="Lawyer hummer..">
-                                        Derecho Civil
+                                    <a href="#">
+                                        <img src="./images/icons/balance.png" alt="Lawyer balance..">
+                                        Derecho Mercantil
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-6 arrow-text">
                                 <p>
-                                    Familia - Herencias - Bancario
-                                    Contratos - Arrendamientos -
-                                    Comunidad de Propietarios
+                                    Contratos mercantiles
+                                    - Derecho societario
+                                    - Modificaciones estructurales: fusión, escisión, segregación
+                                    - Procedimientos concursales: persona física y jurídica
+                                    - Ley de Segunda Oportunidad
+                                    - Propiedad Industrial e Intelectrial
                                 </p>
                             </div>
                         </div>
                     </div>
             
                     <div class="container-fluid w-100 mb-5">
-                        <div class="row arrow right-arrow">
+                        <div class="row arrow right-arrow" id="workArrow">
                             <div class="col-md-6 arrow-text">
                                 <p>
-                                    Delitos leves - Delitos contra la seguridad del tráfico -
-                                    Delitos de persona física - Delitos graves
-                                    Violencia de género - Compliance
+                                    Despidos
+                                    - Contratos laborales
+                                    - Prestaciones de la Seguridad Social
+                                    - Vulneración de Derechos Fundamentales
+                                    - Reclamación de cantidad y reconocimiento de derechos
+                                    - Modificaciones sustanciales de las condiciones del trabajo
+                                    - Negociación extrajudicial y conciliación
                                 </p>
                             </div>
                             <div class="container-fluid col-md-6">
                                 <div class="container-fluid corner corner-rigth arrow-title">
                                     <div class="arrow-border"></div>
-                                    <a href="#" class="">
-                                        Derecho Penal
-                                        <img src="./images/icons/hummer.png" alt="Lawyer hummer..">
+                                    <a href="#">
+                                        Derecho Laboral
+                                        <img src="./images/icons/briefcase.png" alt="Lawyer briefcase..">
                                     </a>
                                 </div>
                             </div>
@@ -153,46 +175,70 @@
                     </div>
 
                     <div class="container-fluid w-100 mb-5">
-                        <div class="row arrow left-arrow">
+                        <div class="row arrow left-arrow" id="adminArrow">
                             <div class="col-md-6">
                                 <div class="container-fluid arrow-title corner corner-left">
                                     <div class="arrow-border"></div>
-                                    <a href="#" class="">
-                                        <img src="./images/icons/hummer.png" alt="Lawyer hummer..">
-                                        Derecho Civil
+                                    <a href="#">
+                                        <img src="./images/icons/bank.png" alt="Lawyer bank..">
+                                        Derecho Administrativo
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-6 arrow-text">
                                 <p>
-                                    Familia - Herencias - Bancario
-                                    Contratos - Arrendamientos -
-                                    Comunidad de Propietarios
+                                    Reclamaciones administrativas
+                                    - Expedientes sancionadores
+                                    - Licencias
+                                    - Plusvalías
+                                    - Responsabilidad patrimonial de la Administración
+                                    - Subvenciones y ayudas
+                                    - Expropiaciones
+                                    - Urbanismo
+                                    - Extranjería
                                 </p>
                             </div>
                         </div>
                     </div>
             
                     <div class="container-fluid w-100 mb-5">
-                        <div class="row arrow right-arrow">
+                        <div class="row arrow right-arrow" id="helpArrow">
                             <div class="col-md-6 arrow-text">
                                 <p>
-                                    Delitos leves - Delitos contra la seguridad del tráfico -
-                                    Delitos de persona física - Delitos graves
-                                    Violencia de género - Compliance
+                                    Fiscal - Laboral - Contable
                                 </p>
                             </div>
                             <div class="container-fluid col-md-6">
                                 <div class="container-fluid corner corner-rigth arrow-title">
                                     <div class="arrow-border"></div>
-                                    <a href="#" class="">
-                                        Derecho Penal
-                                        <img src="./images/icons/hummer.png" alt="Lawyer hummer..">
+                                    <a href="#">
+                                        Asesoria
+                                        <img src="./images/icons/money.png" alt="Lawyer money..">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="container-fluid w-100 mb-5">
+                        <div class="row arrow left-arrow" id="middleArrow">
+                            <div class="col-md-6">
+                                <div class="container-fluid arrow-title corner corner-left">
+                                    <div class="arrow-border"></div>
+                                    <a href="#">
+                                        <img src="./images/icons/handshake.png" alt="Lawyer handshake..">
+                                        Mediación
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 arrow-text">
+                                <p>
+                                    Civil - Mercantil - Laboral
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -246,7 +292,7 @@
                     <div class="row">
                         <div class="col-md-6 menu-info">
                             <div>
-                                <a href="./home.html">Servicios</a>
+                                <a href="./index.html">Servicios</a>
                                 <a href="#">Noticias</a>
                             </div>
                             <div>
