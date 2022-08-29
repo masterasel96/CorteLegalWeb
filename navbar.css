@@ -10,7 +10,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    transition: all .2s linear;
+    transition: height .2s linear;
 }   
 
 #mainNavbar .container-fluid {
@@ -21,7 +21,7 @@
 
 #mainNavbar .navbar-brand img {
     width: 200px;
-    transition: all .1s linear;
+    transition: width .1s linear;
 }
 
 #mainNavbar .navbar-toggler:focus,
