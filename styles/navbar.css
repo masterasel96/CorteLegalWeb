@@ -95,6 +95,21 @@
     font-weight: bold;
 }
 
+#mainNavbar .languaje-buttons {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#mainNavbar .languaje-buttons button {
+    padding: 0px;
+    border: 0px;
+    margin: 0px 2px;
+}
+
+#mainNavbar .languaje-buttons img {
+    width: 25px;
+}
+
 #mainNavbar .dropdown-menu {
     background: #F1F1F1;
     border: 1px solid #E1E1E1;
@@ -165,5 +180,17 @@
     
     #mainNavbar.sticky-active .navbar-toggler div span:nth-child(3) {
         top: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #mainNavbar .languaje-buttons {
+        margin-right: 0px;
+        position: relative;
+        top: -10px;
+    }
+
+    #mainNavbar.sticky-active .languaje-buttons {
+        display: none;
     }
 }
