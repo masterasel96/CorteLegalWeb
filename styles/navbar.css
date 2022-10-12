@@ -14,7 +14,6 @@
 }   
 
 #mainNavbar .container-fluid {
-    padding: 0px;
     max-width: 1200px;
     margin: 0px auto;
 }
@@ -100,6 +99,7 @@
     background: #F1F1F1;
     border: 1px solid #E1E1E1;
     box-shadow: 10px 10px 22px -17px rgb(0 0 0 / 75%);
+    left: -100px;
 }
 
 #mainNavbar .dropdown-menu a:hover {
@@ -135,9 +135,12 @@
         text-align: center;
     }
 
+    #mainNavbar .container-fluid {
+        padding: 0px;
+    }
+
     #mainNavbar .dropdown-menu {
         position: absolute;
-        left: -35px;
     }
 
     #mainNavbar.sticky-active .navbar-collapse {

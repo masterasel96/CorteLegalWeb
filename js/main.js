@@ -1,6 +1,7 @@
 const elements = {
     buttons: {
-        menu: $('#menuHamburguer')
+        menu: $('#menuHamburguer'),
+        query: $('#makeQueryBtn')
     },
     elements: {
         arrows: $('.arrow'),
@@ -11,11 +12,16 @@ const elements = {
     init: function() {
         this.initButtons()
         this.initScrollEvent()
+        this.initQueryButton()
+    },
+
+    initQueryButton: function() {
+        this.buttons.query.click(_ => window.location.href = '../pages/contact.html')
     },
     
     initButtons: function() {
         this.buttons.menu.click(_ => {
-            this.elements.veil.height(window.offsetTop).resize();
+            this.elements.veil.height(window.offsetTop).resize()
             this.elements.veil.toggle()
             $('body').toggleClass('veil')
         })
