@@ -9,13 +9,13 @@
 }
 
 #mainFooter div.container-fluid:nth-child(1) {
-    background-image: url('./images/footer-back-left.png'), url('./images/footer-back-rigth.png');
+    background-image: url('../images/footer-back-left.png'), url('../images/footer-back-rigth.png');
     background-size: 50% 100%, 100% 100%;
     background-repeat: no-repeat, no-repeat;
 }
 
 #mainFooter div.container-fluid:nth-child(1) > div.row {
-    background-image: url('./images/footer.png');
+    background-image: url('../images/footer.png');
     height: 320px;
 }
 
@@ -76,7 +76,7 @@
     }
 
     #mainFooter div.container-fluid:nth-child(1) {
-        background: url(./images/footer-back-rigth.png);
+        background: url('../images/footer-back-rigth.png');
     }
 }
 

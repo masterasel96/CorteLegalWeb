@@ -19,12 +19,12 @@
 
 @font-face {
     font-family: 'title-font';
-    src: URL('./fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf') format('truetype');
+    src: URL('../fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'main-font';
-    src: URL('./fonts/Antic_Didone/AnticDidone-Regular.ttf') format('truetype');
+    src: URL('../fonts/Antic_Didone/AnticDidone-Regular.ttf') format('truetype');
 }
 
 p, span {

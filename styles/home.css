@@ -3,7 +3,7 @@
 .container-img {
     position: relative;
     text-align: center;
-    background-image: url('./images/city.png');
+    background-image: url('../images/city.png');
     height: 550px;
     -webkit-box-shadow: 0px 15px 22px -17px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 15px 22px -17px rgba(0,0,0,0.75);
@@ -326,7 +326,7 @@
 
 .carousel .carousel-item {
     height: 100%;
-    background: url(./images/post.png);
+    background: url('../images/post.png');
 }
 
 .carousel .carousel-item h2 {
