@@ -51,28 +51,33 @@
 
 .container-arrows .left-arrow.active > div,
 .container-arrows .right-arrow.active > div {
-    transition: transform 1s linear;
+    transition: opacity .2s linear, all 1s linear;
+    opacity: 1 !important;
     transform: translate(0px, 0px) !important;
 }
 
 .container-arrows .left-arrow.active div.arrow-border {
-    transition: transform 1s linear;
+    transition: opacity .2s linear, all 1s linear;
+    opacity: 1 !important;
     box-shadow: 0px 5px 20px -20px rgb(0 0 0 / 75%);
 }
 
 .container-arrows .right-arrow.active div.arrow-border {
-    transition: transform 1s linear;
+    transition: opacity .2s linear, all 1s linear;
+    opacity: 1 !important;
     box-shadow: 0px 5px 20px -20px rgb(0 0 0 / 75%);
 }
 
 .container-arrows .left-arrow > div:nth-child(1),
 .container-arrows .right-arrow > div:nth-child(1) {
     transform: translate(-80px, 0px);
+    opacity: 0;
 }
 
 .container-arrows .left-arrow > div:nth-child(2),
 .container-arrows .right-arrow > div:nth-child(2) {
     transform: translate(80px, 0px);
+    opacity: 0;
 }
 
 .container-arrows div.arrow-title {
