@@ -138,6 +138,10 @@
     padding: 0px 10px;
 }
 
+#mainNavbar.sticky-active .languaje-buttons img {
+    width: 20px;
+}
+
 @media only screen and (max-width: 768px) {
     #mainNavbar .navbar-collapse {
         position: absolute;
