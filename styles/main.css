@@ -15,6 +15,8 @@
     - body -> #FBFBFB
     - blue-ligth -> #566D8C
     - blue-dark -> #243763
+    - fail -> #FF6B6B
+    - success -> #6CFF5F
 **/
 
 @font-face {
@@ -49,6 +51,10 @@ body > div.container-fluid {
     margin: 0px auto;
 }
 
+.spinner-border, .spinner-grow {
+  color: #E8E8E8 !important;
+}
+
 button.btn-primary {
     background-color: #243763 !important;
     color: #E8E8E8;
@@ -77,8 +83,42 @@ body.veil {
   overflow-y: hidden;
 }
 
+.toast-container {
+  right: 50% !important;
+}
+
+.toast .toast-header {
+  color: #404040;
+  font-weight: bold;
+  font-family: 'title-font';
+}
+
+.toast .toast-body {
+  color: #404040;
+  font-weight: bold;
+  font-family: 'main-font';
+}
+
+.toast.success-toast .toast-header {
+  background: #6CFF5F;
+}
+
+.toast.success-toast .toast-body {
+  background: #DEFFDB;
+}
+
+.toast.fail-toast .toast-header {
+  background: #FF6B6B;
+}
+
+.toast.fail-toast .toast-body {
+  background: #FFE6E6;
+}
+
 @media screen and (max-width: 768px) {
-    
+  .toast-container {
+    right: 0% !important;
+  }
 }
 
 ::-webkit-scrollbar {
