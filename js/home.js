@@ -1,10 +1,15 @@
-const home = {
+export const home = {
     elements: {
-        arrows: $('.arrow')
+        arrows: []
     },
 
     init: function() {
+        home.initElements()
         home.initScrollEvent()
+    },
+
+    initElements: function() {
+        home.elements.arrows = $('.arrow')
     },
 
     initScrollEvent: function() {
@@ -20,5 +25,3 @@ const home = {
         });
     }
 }
-
-$(document).ready(_ => home.init())

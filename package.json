@@ -1,0 +1,14 @@
+{
+  "name": "cortelegalweb",
+  "version": "0.0.1",
+  "description": "Front for Corte Legal Lawyers Web",
+  "main": "index.js",
+  "scripts": { },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masterasel96/CorteLegalWeb.git"
+  },
+  "author": "MubLab Devs",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "type": "module"
+}

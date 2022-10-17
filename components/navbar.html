@@ -1,0 +1,56 @@
+<div class="container-fluid flex-row">
+    <div class="container-fluid w-50">
+        <a class="navbar-brand" href="/">
+            <img src="../images/logo.png" alt="Logo...">
+        </a>
+    </div>
+    <div class="container-fluid w-50 flex-column text-end">
+        <div class="container-fluid w-100 text-end p-1">
+            <div class="languaje-buttons">
+                <button id="lang_spain">
+                    <img src="../images/icons/spain.png" alt="Spain languaje...">
+                </button>
+                <button id="lang_english">
+                    <img src="../images/icons/uk.png" alt="English languaje...">
+                </button>
+                <button id="lang_france">
+                    <img src="../images/icons/france.png" alt="France languaje...">
+                </button>
+            </div>
+            <button id="makeQueryBtn" class="btn btn-primary">Haz tu consulta</button>
+        </div>
+
+        <button class="navbar-toggler navbar-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menuCategories" aria-controls="menuCategories" aria-expanded="false"
+            aria-label="Toggle navigation" id="menuHamburguer">
+            <div><span></span><span></span><span></span></div>
+        </button>
+
+        <div class="navbar-collapse collapse" id="menuCategories">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/" data-nav="home">INICIO</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/services" data-nav="services" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        SERVICIOS
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">DERECHO CIVIL</a></li>
+                        <li><a class="dropdown-item" href="#">DERECHO PENAL</a></li>
+                        <li><a class="dropdown-item" href="#">DERECHO MERCANTIL</a></li>
+                        <li><a class="dropdown-item" href="#">DERECHO LABORAL</a></li>
+                        <li><a class="dropdown-item" href="#">DERECHO ADMINISTRATIVO</a></li>
+                        <li><a class="dropdown-item" href="#">ASESORÍA</a></li>
+                        <li><a class="dropdown-item" href="#">MEDIACIÓN</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-nav="team" href="/team">EQUIPO</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

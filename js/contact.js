@@ -1,20 +1,28 @@
-const contact = {
+import { main } from './main.js'
+
+export const contact = {
     buttons: {
-        makeContactRequest: $('#makeContactRequestBtn')
+        makeContactRequest: null
     },
     elements: {
-        contactFormInputs: $('#contactForm input, #contactForm textarea')
+        contactFormInputs: null
     },
     toasts: { },
 
     init: function() {
+        contact.initElements()
         contact.initContactRequestButton()
         contact.initContactRequestInputs()
         main.initToasts(contact.toasts)
     },
 
+    initElements: function() {
+        contact.buttons.makeContactRequest = $('#makeContactRequestBtn')
+        contact.elements.contactFormInputs = $('#contactForm input, #contactForm textarea')
+    },
+
     initContactRequestButton: function() {
-        contact.buttons.makeContactRequest.click(_ => main.validateContactForm(
+        contact.buttons.makeContactRequest.click(_ => main.validateForm(
             contact.elements.contactFormInputs, 
             contact.showFailValidation, 
             contact.sendContactRequest
@@ -36,5 +44,3 @@ const contact = {
 
     showFailValidation: _ => contact.toasts.failValidationFormToast.show()
 }
-
-$(document).ready(_ => contact.init())

@@ -1,0 +1,82 @@
+<div class="main-container">
+    <form class="m-3" id="contactForm">
+        <div class="row mt-4 mb-4">
+            <div class="text-center mt-2 mb-5 contact-title d-flex justify-content-around">
+                <p class="w-60">Contacta con nuestro equipo sin compromiso</p> 
+            </div>
+
+            <div class="form-outline mb-4 col-12 col-md-6">
+                <label class="form-label" for="clientName">Nombre</label>
+                <input type="text" id="clientName" name="clientName" class="form-control" required/>
+            </div>
+
+            <div class="form-outline mb-4 col-12 col-md-6">
+                <label class="form-label" for="clientSurname">Apellidos</label>
+                <input type="text" id="clientSurname" name="clientSurname" class="form-control" required/>
+            </div>
+
+            <div class="form-outline mb-4 col-12 col-md-6">
+                <label class="form-label" for="clientEmail">Email</label>
+                <input type="email" id="clientEmail" name="clientEmail" class="form-control" required/>
+            </div>
+
+            <div class="form-outline mb-4 col-12 col-md-6">
+                <label class="form-label" for="clientNumber">Teléfono de contacto</label>
+                <input type="tel" id="clientNumber" name="clientNumber" class="form-control" minlength="6" required/>
+            </div>
+
+            <div class="form-outline mb-4 col-12">
+                <label class="form-label" for="clientRequest">Asunto</label>
+                <input type="text" id="clientRequest" name="clientRequest" class="form-control" required/>
+            </div>
+
+            <div class="form-outline mb-4 col-12">
+                <label class="form-label" for="clientDescription">Descripción</label>
+                <textarea name="clientDescription" id="clientDescription"></textarea>
+            </div>
+
+            <div class="d-flex justify-content-center loading-button">
+                <button type="button" class="btn btn-primary mb-3" id="makeContactRequestBtn">
+                    <span>Enviar</span>
+                    <span class="spinner-border d-none" role="status"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="toast-container position-fixed top-50 p-3">
+    <div id="successRequestToast" class="toast success-toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Mensaje enviado</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Muchas gracias por su confianza, en breve nuestro equipo de especialistas se pondrá en contacto con usted
+      </div>
+    </div>
+</div>
+
+<div class="toast-container position-fixed top-50 p-3">
+    <div id="failRequestToast" class="toast fail-toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Algo salio mal</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Opss!, parece que ha surgido un problema, vuelva a intentarlo un poco mas tarde...
+      </div>
+    </div>
+</div>
+
+<div class="toast-container position-fixed top-50 p-3">
+    <div id="failValidationFormToast" class="toast fail-toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Revise el formulario</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Parece que falla algo en su formulario de contacto
+      </div>
+    </div>
+</div>
