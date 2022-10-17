@@ -8,6 +8,7 @@ export const router = {
     init: () => {
         page('/', _ => router.route('home', 'Inicio', home))
         page('/contact', _ => router.route('contact', 'Contacto', contact))
+        page('*', _ => router.route('home', 'Inicio', home))
         page()
     },
 
