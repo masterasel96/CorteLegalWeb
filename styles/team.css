@@ -39,9 +39,6 @@
 }
 
 .team-list {
-    font-family: 'main-font';
-    font-weight: bold;
-    font-size: 18px;
     margin-bottom: 90px;
     margin-top: 40px;
 }
@@ -58,7 +55,9 @@
     border-bottom: 1px solid #E1E1E1;
     padding-bottom: 3px;
     color: #566D8C;
-    font-family: 'title-font';
+    font-family: 'main-font';
+    font-weight: bold;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
