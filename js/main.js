@@ -23,5 +23,7 @@ export const main = {
         button.prop('disabled', !button.prop('disabled'));
         button.children().eq(0).toggleClass('d-none')
         button.children().eq(1).toggleClass('d-none')
-    }
+    },
+
+    checkPointOfView: (element) => window.innerHeight + window.scrollY - 50 > element.offsetTop
 }

@@ -1,5 +1,6 @@
 import { home } from './home.js'
 import { contact } from './contact.js'
+import { team } from './team.js'
 import { navbar } from './navbar.js'
 
 export const router = {
@@ -8,6 +9,7 @@ export const router = {
     init: () => {
         page('/', _ => router.route('home', 'Inicio', home))
         page('/contact', _ => router.route('contact', 'Contacto', contact))
+        page('/team', _ => router.route('team', 'Equipo', team))
         page('*', _ => page.redirect('/'))
         page()
     },

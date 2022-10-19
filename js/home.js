@@ -1,3 +1,5 @@
+import { main } from "./main.js"
+
 export const home = {
     elements: {
         arrows: []
@@ -20,7 +22,7 @@ export const home = {
     controlArrowsAnimation: function() {
         home.elements.arrows.each((c, arrow) => {
             !$(arrow).hasClass('active') 
-            && window.innerHeight + window.scrollY - 50 > arrow.offsetTop 
+            && main.checkPointOfView(arrow)
             && $(arrow).addClass('active')
         });
     }
