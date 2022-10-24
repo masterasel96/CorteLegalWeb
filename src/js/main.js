@@ -1,7 +1,10 @@
+import $ from 'jquery'
+import { Toast } from 'bootstrap'
+
 export const main = {
     veil: $('#veil'),
 
-    initToasts: (toasts) => $('.toast').each((c, e) => toasts[e.id] = new bootstrap.Toast(e, { delay: 4000 })),
+    initToasts: (toasts) => $('.toast').each((c, e) => toasts[e.id] = new Toast(e, { delay: 4000 })),
 
     validateInput: (input) => input.checkValidity() ? $(input).removeClass('not-valid') : $(input).addClass('not-valid'),
 

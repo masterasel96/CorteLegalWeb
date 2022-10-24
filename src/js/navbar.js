@@ -1,7 +1,12 @@
-import { main } from './main.js'
+import $ from 'jquery'
+import page from 'page'
+
+import { main } from './main'
+import component from '../components/navbar.html'
+import '../styles/navbar.css'
 
 export const navbar = {
-    content: $('#mainNavbar'),
+    content: $('#navbar'),
     buttons: {
         menu: null,
         makeQuery: null
@@ -11,22 +16,18 @@ export const navbar = {
         navs: null
     },
 
-    init: async function() {
-        navbar.content.load(
-            `../components/navbar.html`,
-            _ => {
-                navbar.initElements()
-                navbar.initScrollEvent()
-                navbar.initMenu()
-                navbar.initRouters()
-            }
-        )
+    init: function() {
+        navbar.content.html(component)
+        navbar.initElements()
+        navbar.initScrollEvent()
+        navbar.initMenu()
+        navbar.initRouters()
     },
 
     initElements: function() {
         navbar.buttons.menu = $('#menuHamburguer')
         navbar.buttons.makeQuery = $('#makeQueryBtn')
-        navbar.elements.navbar = $('#mainNavbar')
+        navbar.elements.navbar = $('#navbar')
         navbar.elements.navs = $('.nav-link')
     },
 

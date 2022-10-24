@@ -1,7 +1,12 @@
-import { main } from "./main.js"
+import $ from 'jquery'
+import { main } from "./main"
+import '../styles/team.css'
 
 export const team = {
     elements: null,
+
+    navName: 'team',
+    title: 'Equipo',
 
     init: function() {
         team.initElements()

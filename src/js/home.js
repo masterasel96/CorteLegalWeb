@@ -1,9 +1,14 @@
-import { main } from "./main.js"
+import $ from 'jquery'
+import { main } from './main'
+import '../styles/home.css'
 
 export const home = {
     elements: {
         arrows: []
     },
+
+    navName: 'home',
+    title: 'Inicio', 
 
     init: function() {
         home.initElements()

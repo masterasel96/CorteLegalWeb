@@ -1,4 +1,6 @@
-import { main } from './main.js'
+import $ from 'jquery'
+import { main } from './main'
+import '../styles/contact.css'
 
 export const contact = {
     buttons: {
@@ -8,6 +10,9 @@ export const contact = {
         contactFormInputs: null
     },
     toasts: { },
+
+    navName: 'contact',
+    title: 'Contacto',
 
     init: function() {
         contact.initElements()
