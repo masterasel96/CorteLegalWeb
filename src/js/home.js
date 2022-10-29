@@ -21,7 +21,7 @@ export const home = {
 
     initScrollEvent: function() {
         home.controlArrowsAnimation()
-        $(document).scroll(_ => home.controlArrowsAnimation())
+        $(document).on('scroll', _ => home.controlArrowsAnimation())
     },
 
     controlArrowsAnimation: function() {

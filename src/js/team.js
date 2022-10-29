@@ -19,7 +19,7 @@ export const team = {
 
     initScrollEvent: function() {
         team.controlAnimations()
-        $(document).scroll(_ => team.controlAnimations())
+        $(document).on('scroll', _ => team.controlAnimations())
     },
 
     controlAnimations: function() {

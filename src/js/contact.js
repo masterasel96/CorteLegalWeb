@@ -44,12 +44,17 @@ export const contact = {
     sendContactRequest: async function () {
         main.loadingButton(contact.buttons.makeContactRequest)
         const form = main.getForm(contact.elements.contactFormInputs)
-        const response = await main.makePost(contact.endpoints.sendEmail, form)
-        const success = main.handleResponse(response)
+
+        let success = false
+        try {
+            const response = await main.makePost(contact.endpoints.sendEmail, form)
+            success = main.handleResponse(response)
+        } catch (error) { }
+        
         main.loadingButton(contact.buttons.makeContactRequest)
 
         success ? contact.toasts.successRequestToast.show() : 
-            contact.toasts.failValidationFormToast.show()
+            contact.toasts.failRequestToast.show()
 
         main.emptyForm(contact.elements.contactFormInputs)
     }, 

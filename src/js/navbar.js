@@ -33,7 +33,7 @@ export const navbar = {
 
     initScrollEvent: function() {
         navbar.controlNavbar()
-        $(document).scroll(_ => navbar.controlNavbar())
+        $(document).on('scroll', _ => navbar.controlNavbar())
     },
 
     initRouters: function() {
@@ -47,7 +47,7 @@ export const navbar = {
             navbar.buttons.menu.is(':visible') &&
             navbar.buttons.menu.trigger('click')
         }) 
-        main.veil.click(_ => navbar.buttons.menu.trigger('click'))
+        main.veil.on('click', _ => navbar.buttons.menu.trigger('click'))
     },
 
     controlNavbar: function() {
@@ -56,7 +56,7 @@ export const navbar = {
     },
 
     controlVeil: function() {
-        main.veil.height(window.offsetTop).resize()
+        main.veil.height(window.offsetTop).trigger('resize')
         main.veil.toggle()
         $('body').toggleClass('veil')
     },
