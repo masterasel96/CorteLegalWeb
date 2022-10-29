@@ -10,6 +10,9 @@ export const contact = {
         contactFormInputs: null
     },
     toasts: { },
+    endpoints: {
+        sendEmail: 'mail'
+    },
 
     navName: 'contact',
     title: 'Contacto',
@@ -40,12 +43,16 @@ export const contact = {
 
     sendContactRequest: async function () {
         main.loadingButton(contact.buttons.makeContactRequest)
-        // TODO: SEND EMAIL VIA API NODE
-        await new Promise(r => setTimeout(r, 2000));
+        const form = main.getForm(contact.elements.contactFormInputs)
+        const response = await main.makePost(contact.endpoints.sendEmail, form)
+        const success = main.handleResponse(response)
         main.loadingButton(contact.buttons.makeContactRequest)
-        contact.toasts.successRequestToast.show()
+
+        success ? contact.toasts.successRequestToast.show() : 
+            contact.toasts.failValidationFormToast.show()
+
         main.emptyForm(contact.elements.contactFormInputs)
-    },
+    }, 
 
     showFailValidation: _ => contact.toasts.failValidationFormToast.show()
 }

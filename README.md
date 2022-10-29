@@ -2,6 +2,7 @@
 Front for Corte Legal Web Lawyers 
 
 # Launch proyect in development
+- Add environment.js in root project path
 - Install dependencies --> npm install
 - Run project in port 8080 --> npm run dev
 

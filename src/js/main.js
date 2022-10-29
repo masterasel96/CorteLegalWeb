@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import { Toast } from 'bootstrap'
+import { API_KEY_VALUE, API_KEY_NAME, AUTH_NAME, AUTH_PASS, API_URL } from '../../environment'
 
 export const main = {
     veil: $('#veil'),
@@ -15,9 +16,13 @@ export const main = {
             main.validateInput(input)
         })
 
-        !valid && failCallback()
+        valid ? successCallback() : failCallback()
+    },
 
-        valid && successCallback()
+    getForm: (inputs) => {
+        let form = {}
+        inputs.each((c, input) => form[input.name] = input.value)
+        return form
     },
 
     emptyForm: (inputs) => inputs.val(''),
@@ -28,5 +33,23 @@ export const main = {
         button.children().eq(1).toggleClass('d-none')
     },
 
-    checkPointOfView: (element) => window.innerHeight + window.scrollY - 50 > element.offsetTop
+    checkPointOfView: (element) => window.innerHeight + window.scrollY - 50 > element.offsetTop,
+
+    makePost: async (endpoint, data) => {
+        const options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": 'Basic ' + btoa(`${AUTH_NAME}:${AUTH_PASS}`)
+            },
+            
+            body: JSON.stringify(data)
+        }
+
+        options.headers[API_KEY_NAME] = API_KEY_VALUE
+
+        return fetch(`${API_URL}/${endpoint}`, options)
+    },
+
+    handleResponse: async response => response.status === 200 && (await response.json()).data.response 
 }
