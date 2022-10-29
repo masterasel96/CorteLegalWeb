@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/masterasel96/CorteLegalWeb.git"
   },
-  "author": "MubLab Devs",
+  "author": "masterasel96",
   "license": "GNU GENERAL PUBLIC LICENSE",
   "devDependencies": {
     "@babel/core": "^7.19.6",
