@@ -48,7 +48,7 @@ export const contact = {
         let success = false
         try {
             const response = await main.makePost(contact.endpoints.sendEmail, form)
-            success = main.handleResponse(response)
+            success = await main.handleResponse(response)
         } catch (error) { }
         
         main.loadingButton(contact.buttons.makeContactRequest)

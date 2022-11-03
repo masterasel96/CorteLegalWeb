@@ -19,7 +19,7 @@ RewriteRule ^.*$ ./index.html
 
 -- Put in apache2.conf --
 
-<Directory /var/www/html/CorteLegalWeb>
+<Directory /var/www/html>
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
