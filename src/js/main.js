@@ -28,7 +28,7 @@ export const main = {
     emptyForm: (inputs) => inputs.val(''),
 
     loadingButton: function(button) {
-        button.prop('disabled', !button.prop('disabled'));
+        button.prop('disabled', !button.prop('disabled'))
         button.children().eq(0).toggleClass('d-none')
         button.children().eq(1).toggleClass('d-none')
     },

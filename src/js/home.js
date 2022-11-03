@@ -29,6 +29,6 @@ export const home = {
             !$(arrow).hasClass('active') 
             && main.checkPointOfView(arrow)
             && $(arrow).addClass('active')
-        });
+        })
     }
 }

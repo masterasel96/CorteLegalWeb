@@ -27,6 +27,6 @@ export const team = {
             !$(element).hasClass('active') 
             && main.checkPointOfView(element)
             && $(element).addClass('active')
-        });
+        })
     }
 }
