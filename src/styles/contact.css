@@ -24,6 +24,10 @@
     font-family: 'main-font';
 }
 
+#contactForm label a {
+    color: #566D8C;
+}
+
 #contactForm input {
     border: 1px solid #E1E1E1;
     border-radius: 3px;

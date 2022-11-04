@@ -25,7 +25,10 @@ export const main = {
         return form
     },
 
-    emptyForm: (inputs) => inputs.val(''),
+    emptyForm: (inputs) => {
+        inputs.val('')
+        inputs.prop('checked', false)
+    },
 
     loadingButton: function(button) {
         button.prop('disabled', !button.prop('disabled'))
