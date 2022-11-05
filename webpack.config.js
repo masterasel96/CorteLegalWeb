@@ -1,5 +1,8 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TerserPlugin = require("terser-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
 module.exports = (env, argv) => {
 
@@ -15,6 +18,9 @@ module.exports = (env, argv) => {
       filename: isProduction ? '[name].[contenthash].js' : '[name]_bundle.js',
     },
     plugins: [
+      new MiniCssExtractPlugin({
+        filename: isProduction ? '[name].[contenthash].css' : '[name]_bundle.css'
+      }),
       new HtmlWebpackPlugin({
         template: 'src/index.html'
       })
@@ -27,7 +33,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.css$/,
-          use: ['style-loader', 'css-loader']
+          use: [MiniCssExtractPlugin.loader, 'css-loader']
         },
         {
           test: /\.html$/,
@@ -39,6 +45,12 @@ module.exports = (env, argv) => {
       proxy: {
         '*': 'http://localhost:8080?',
       }
+    },
+    optimization: {
+      minimizer: [
+        new TerserPlugin(),
+        new CssMinimizerPlugin()
+      ]
     }
   }
 }
