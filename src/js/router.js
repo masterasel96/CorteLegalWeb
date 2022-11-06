@@ -1,6 +1,8 @@
 import $ from 'jquery'
 import page from 'page'
 
+import { languajes } from './languajes' 
+
 import { home } from './home'
 import { contact } from './contact'
 import { team } from './team'
@@ -21,10 +23,11 @@ export const router = {
         page()
     },
 
-    route: (component, { init, navName, title }) => {
-        router.content.html(component)
+    route: (component, { init, name, title }) => {
+        const content = languajes.render(component, name)
+        router.content.html(content)
         init()
-        navbar.setNav(navName)
+        navbar.setNav(name)
         router.setTitle(title)
     },
 

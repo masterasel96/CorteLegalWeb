@@ -3,33 +3,29 @@ import * as english from '../languajes/english'
 import * as french from '../languajes/french'
 
 import Mustache from 'mustache'
+import Cookies from 'js-cookie'
 
 export const languajes = {
     es_ES: 'es_ES',
     en_EN: 'en_EN',
     fr_FR: 'fr_FR',
 
-    render: (elementId, component) => {
-        const content = document.getElementById(elementId)
-        const texts = languajes.getTexts(component)
+    render: (component, name) => Mustache.render(component, languajes.getTexts(name)),
 
-        content.innerHTML = Mustache.render(content.innerHTML, texts)
-    },
-
-    getTexts: (component) => {
+    getTexts: (name) => {
         const languaje = languajes.getLanguaje()
 
         switch (languaje) {
             case languajes.es_ES:
-                return spanish[component]
+                return spanish[name]
             case languajes.en_EN:
-                return english[component]
+                return english[name]
             case languajes.fr_FR:
-                return french[component]
+                return french[name]
             default:
-                return spanish[component]
+                return spanish[name]
         }
     },
 
-    getLanguaje: () => languajes.es_ES // TODO: Get languaje from cookie
+    getLanguaje: () => Cookies.get('languaje') ?? languajes.es_ES
 }

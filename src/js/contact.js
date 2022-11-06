@@ -14,7 +14,7 @@ export const contact = {
         sendEmail: 'mail'
     },
 
-    navName: 'contact',
+    name: 'contact',
     title: 'Contacto',
 
     init: function() {

@@ -5,7 +5,7 @@ import '../styles/team.css'
 export const team = {
     elements: null,
 
-    navName: 'team',
+    name: 'team',
     title: 'Equipo',
 
     init: function() {

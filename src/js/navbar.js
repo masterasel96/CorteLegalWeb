@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import page from 'page'
 
+import { languajes } from './languajes' 
 import { main } from './main'
 import component from '../components/navbar.html'
 import '../styles/navbar.css'
@@ -17,7 +18,8 @@ export const navbar = {
     },
 
     init: function() {
-        navbar.content.html(component)
+        const content = languajes.render(component, 'navbar')
+        navbar.content.html(content)
         navbar.initElements()
         navbar.initScrollEvent()
         navbar.initMenu()
