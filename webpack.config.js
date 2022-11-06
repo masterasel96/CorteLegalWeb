@@ -33,7 +33,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.css$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader']
+          use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader']
         },
         {
           test: /\.html$/,
@@ -47,6 +47,7 @@ module.exports = (env, argv) => {
       }
     },
     optimization: {
+      minimize: isProduction,
       minimizer: [
         new TerserPlugin(),
         new CssMinimizerPlugin()
