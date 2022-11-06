@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import { main } from './main'
+import { languajes } from './languajes'
 import '../styles/home.css'
 
 export const home = {
@@ -11,6 +12,7 @@ export const home = {
     title: 'Inicio', 
 
     init: function() {
+        languajes.render('content', 'home')
         home.initElements()
         home.initScrollEvent()
     },
