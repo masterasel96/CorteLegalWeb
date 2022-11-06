@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import { languajes } from './languajes' 
-import component from '../components/footer.html'
+import component from '../templates/footer.html'
 import '../styles/footer.css'
 
 export const footer = {

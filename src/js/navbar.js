@@ -1,16 +1,19 @@
 import $ from 'jquery'
 import page from 'page'
+import Cookies from 'js-cookie'
 
 import { languajes } from './languajes' 
 import { main } from './main'
-import component from '../components/navbar.html'
+import component from '../templates/navbar.html'
 import '../styles/navbar.css'
+import { router } from './router'
 
 export const navbar = {
     content: $('#navbar'),
     buttons: {
         menu: null,
-        makeQuery: null
+        makeQuery: null,
+        languajes: null
     },
     elements: {
         navbar: null,
@@ -24,6 +27,7 @@ export const navbar = {
         navbar.initScrollEvent()
         navbar.initMenu()
         navbar.initRouters()
+        navbar.initLanguajeButtons()
     },
 
     initElements: function() {
@@ -31,6 +35,15 @@ export const navbar = {
         navbar.buttons.makeQuery = $('#makeQueryBtn')
         navbar.elements.navbar = $('#navbar')
         navbar.elements.navs = $('.nav-link')
+        navbar.buttons.languajes = $('.languaje-buttons button')
+    },
+
+    initLanguajeButtons: function() {
+        navbar.buttons.languajes.click(({ currentTarget }) => {
+            const languaje = currentTarget.getAttribute('data-lang') ?? 'es_ES'
+            Cookies.set('languaje', languaje)
+            router.reload()
+        })
     },
 
     initScrollEvent: function() {
