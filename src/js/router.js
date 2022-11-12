@@ -6,12 +6,14 @@ import { languajes } from './languajes'
 import { home } from './home'
 import { contact } from './contact'
 import { team } from './team'
+import { services } from './services'
 import { navbar } from './navbar'
 import { footer } from './footer'
 
 import homeTemplate from '../templates/home.html'
 import contactTemplate from '../templates/contact.html'
 import teamTemplate from '../templates/team.html'
+import servicesTemplate from '../templates/services.html'
 
 export const router = {
     content: $('#content'),
@@ -21,6 +23,7 @@ export const router = {
         page('/', _ => router.route(homeTemplate, home))
         page('/contact', _ => router.route(contactTemplate, contact))
         page('/team', _ => router.route(teamTemplate, team))
+        page('/services', _ => router.route(servicesTemplate, services))
         page('*', _ => page.redirect('/'))
         page()
     },
